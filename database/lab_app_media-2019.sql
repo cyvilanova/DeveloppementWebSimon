@@ -22,6 +22,9 @@ SET time_zone = "+00:00";
 -- Database: `lab_app_media`
 --
 
+CREATE DATABASE lab_app_media;
+USE lab_app_media;
+
 -- --------------------------------------------------------
 
 --
