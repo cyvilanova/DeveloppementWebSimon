@@ -15,7 +15,7 @@
 <body>
 
 <div class="header">
-    <img src="../../images/icones/logo.png" alt="logo">
+    <img src="../../images/icones/logo.png" alt="logo" class="logo">
     <nav class="navigation">
         <div class="top-links">
             <a href="../login.php">S'identifier</a>
