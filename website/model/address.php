@@ -11,7 +11,6 @@ class address
     private $code_postal;
 
     public static function load($pk_addresse) {
-
         $result = executeSelect("SELECT * FROM `lab_app_media`.`adresse`
         WHERE `adresse`.pk_adresse = :pk_addresse", array(":pk_addresse" => $pk_addresse));
 
