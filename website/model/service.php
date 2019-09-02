@@ -1,12 +1,14 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'] . "/website/utils/statement_executor.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/website/model/promotion_service.php";
 
 class service
 {
     private $pk_service;
     private $service_titre;
     private $service_description;
+    private $promotions;
     private $duree;
     private $tarif;
     private $actif;
@@ -27,6 +29,18 @@ class service
         $service->setActif($row["actif"]);
         $service->setImage($row["image"]);
 
+        $result->closeCursor();
+
+        $result = executeSelect("SELECT `ta_promotion_service`.pk_promotion_service FROM `lab_app_media`.ta_promotion_service
+                                WHERE fk_service = :fk_service", array(":fk_service" => $pk_service));
+        $tmpArray = array();
+
+        while($row = $result->fetch()) {
+            array_push($tmpArray,
+                promotion_service::loadWithPk($row["pk_promotion_service"]));
+        }
+
+        $service->setPromotions($tmpArray);
         $result->closeCursor();
 
         return $service;
@@ -52,7 +66,19 @@ class service
         return $service;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getPromotions() {
+        return $this->promotions;
+    }
 
+    /**
+     * @param mixed $promotions
+     */
+    public function setPromotions($promotions) {
+        $this->promotions = $promotions;
+    }
 
     /**
      * service constructor.

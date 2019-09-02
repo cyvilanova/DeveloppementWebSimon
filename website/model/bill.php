@@ -1,6 +1,7 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'] . "/website/model/client.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/website/model/facture_service.php";
 
 class bill
 {
@@ -9,6 +10,7 @@ class bill
     private $date_service;
     private $paiement_status;
     private $no_confirmation;
+    private $services;
 
     public static function load($pk_facture) {
         $result = executeSelect("SELECT * FROM `lab_app_media`.`facture` WHERE `facture`.pk_facture = :pk_facture",
@@ -24,6 +26,17 @@ class bill
         $bill->setPaiementStatus($row["paiement_status"]);
 
         $result->closeCursor();
+
+        $result = executeSelect("SELECT * FROM `lab_app_media`.`ta_facture_service`
+                WHERE ta_facture_service.fk_facture = :fk_facture", array(":fk_facture" => $pk_facture));
+        $tmpArray = array();
+
+
+        while ($row = $result->fetch()) {
+            array_push($tmpArray, facture_service::load($row["pk_facture_service"]));
+        }
+
+        $bill->setServices($tmpArray);
 
         return $bill;
     }
@@ -44,6 +57,20 @@ class bill
         $bill->setDateService($date_service);
 
         return $bill;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getServices() {
+        return $this->services;
+    }
+
+    /**
+     * @param mixed $services
+     */
+    public function setServices($services) {
+        $this->services = $services;
     }
 
     /**
