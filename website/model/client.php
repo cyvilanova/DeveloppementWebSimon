@@ -29,6 +29,8 @@ class client
         $client->setPrenom($row["prenom"]);
         $client->setTelephone($row["telephone"]);
 
+        $result->closeCursor();
+
         return $client;
     }
 
