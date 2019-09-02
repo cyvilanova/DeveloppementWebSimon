@@ -14,7 +14,7 @@
 
 .form {
     margin: 20px 0;
-    width: 300px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -33,6 +33,9 @@
 }
 .inputs input {
     margin-bottom: 10px;
+    padding: 5px;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 16px;
 }
 
 ::placeholder { /* Firefox, Chrome, Opera */
@@ -55,11 +58,11 @@
 }
 
 button {
-    border-radius: 10px;
+    width: 170px;
+    border-radius: 15px;
     color: var(--light);
     background: linear-gradient(180deg, var(--light), var(--orange));
-    border: none;
-    padding: 0 13px;
     font-family: "Century Gothic", sans-serif;
     font-size: 26px;
+    border: 1px solid var(--orange);
 }
