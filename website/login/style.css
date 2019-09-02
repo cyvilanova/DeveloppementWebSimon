@@ -1,0 +1,65 @@
+.page {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.text {
+    font-size: 26px;
+    font-weight: bold;
+    width: 40%;
+}
+
+.form {
+    margin: 20px 0;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form a {
+    color: var(--red);
+    margin-top: 10px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.inputs input {
+    margin-bottom: 10px;
+}
+
+::placeholder { /* Firefox, Chrome, Opera */
+    color: var(--orange);
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--orange);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--orange);
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    border-radius: 10px;
+    color: var(--light);
+    background: linear-gradient(180deg, var(--light), var(--orange));
+    border: none;
+    padding: 0 13px;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 26px;
+}
