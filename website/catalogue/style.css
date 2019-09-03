@@ -1,0 +1,47 @@
+.page {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    border: 2px solid var(--orange);
+    padding: 10px 20px;
+}
+
+.informations {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer {
+     display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.title, .footer {
+    font-size: 26px;
+}
+
+.description {
+    font-size: 22px;
+}
+
+.price {
+    color: var(--blue);
+    padding-right: 100px;
+}
+
+.duration {
+    color: var(--orange);
+}
+
+.footer img {
+    height: 50px;
+    width: auto;
+}
