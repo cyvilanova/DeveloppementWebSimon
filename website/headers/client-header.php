@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Info++</title>
-    <link rel="stylesheet" href="../global.scss">
-    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -24,7 +24,7 @@
 
         <div class="bottom-links">
             <a href="" class="red">Catalogue</a>
-            <a href="" class="orange">Profil</a>
+            <a href="../user-form/form.php" class="orange">Profil</a>
             <label>
                 <input class="search">
             </label>
