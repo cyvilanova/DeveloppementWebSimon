@@ -67,9 +67,7 @@ select {
     justify-content: flex-end;
 }
 
-.buttons a {
-    cursor: pointer;
-    text-align: center;
+button {
     width: 170px;
     border-radius: 15px;
     color: var(--light);
@@ -77,7 +75,6 @@ select {
     font-family: "Century Gothic", sans-serif;
     font-size: 26px;
     border: 1px solid var(--orange);
-    text-decoration: none;
 }
 
 .newsletter {
@@ -116,5 +113,5 @@ select {
 }
 
 input[type=checkbox] {
-    display: none;
+    display:none;
 }
