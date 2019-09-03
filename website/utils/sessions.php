@@ -16,6 +16,10 @@ function stop_session() {
     }
 }
 
+function session_exists() {
+    return isset($_SESSION) && !empty($_SESSION["user"]);
+}
+
 function redirect_unauthenticated_user($path) {
     if (!isset($_SESSION)) {
         header("Location: " . $path);
