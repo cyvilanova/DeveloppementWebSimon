@@ -57,7 +57,9 @@
     margin-top: 20px;
 }
 
-button {
+.buttons a {
+    cursor: pointer;
+    text-align: center;
     width: 170px;
     border-radius: 15px;
     color: var(--light);
@@ -65,4 +67,5 @@ button {
     font-family: "Century Gothic", sans-serif;
     font-size: 26px;
     border: 1px solid var(--orange);
+    text-decoration: none;
 }

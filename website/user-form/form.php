@@ -66,7 +66,7 @@
             <label for="newsletter">Souhaitez-vous recevoir les promotions et les nouveautés?</label>
         </div>
         <div class="buttons">
-            <button type="submit">Confirmer</button>
+            <a>Confirmer</a>
         </div>
     </form>
 </div>

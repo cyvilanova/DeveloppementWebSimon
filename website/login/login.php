@@ -26,8 +26,8 @@
         <a href="">Mot de passe oublié</a>
 
         <div class="buttons">
-            <button type="submit">Connexion</button>
-            <button>S'inscrire</button>
+            <a>Connexion</a>
+            <a href="../user-form/form.php">S'inscrire</a>
         </div>
 
     </form>

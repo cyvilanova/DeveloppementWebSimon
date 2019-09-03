@@ -24,7 +24,7 @@
 
         <div class="bottom-links">
             <a href="" class="red">Catalogue</a>
-            <a href="" class="orange">Profil</a>
+            <a href="../user-form/form.php" class="orange">Profil</a>
             <label>
                 <input class="search">
             </label>
