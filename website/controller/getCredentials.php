@@ -6,7 +6,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] ."/website/model/client.php";
 
 
 if (!empty(sanitize_user_input($_GET["email"])) && !empty(sanitize_user_input($_GET["password"]))) {
-
     $result = executeSelect("SELECT pk_utilisateur FROM `lab_app_media`.utilisateur WHERE courriel = :courriel",
     array(":courriel" => sanitize_user_input($_GET["email"])));
 
@@ -15,10 +14,14 @@ if (!empty(sanitize_user_input($_GET["email"])) && !empty(sanitize_user_input($_
 
     if (password_verify(sanitize_user_input($_GET), $user->getMotDePasse())) {
         create_session($user);
+        echo "{ \"status\" : \"logged_\" }";
+
+    } else {
+        echo "{ \"status\" : \"invalid credentials\" }";
+
     }
 
 } else {
-
     echo "{ \"status\" : \"missing arguments\" }";
 
 }
