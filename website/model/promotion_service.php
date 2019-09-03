@@ -3,7 +3,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . "/website/model/service.php";
 
 
-class promotion_service
+class promotion_service implements JsonSerializable
 {
     private $pk_promotion_service;
     private $fk_promotion;
@@ -158,6 +158,17 @@ class promotion_service
      */
     public function setCode($code) {
         $this->code = $code;
+    }
+
+    /**
+     * Specify data which should be serialized to JSON
+     * @link https://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize() {
+        return get_object_vars($this);
     }
 
 }

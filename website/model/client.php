@@ -4,7 +4,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] ."/website/utils/statement_executor.php";
 require_once $_SERVER['DOCUMENT_ROOT'] ."/website/model/address.php";
 require_once $_SERVER['DOCUMENT_ROOT'] ."/website/model/user.php";
 
-class client
+class client implements JsonSerializable
 {
     private $pk_client;
     private $fk_utilisateur;
@@ -157,5 +157,16 @@ class client
      */
     public function setInfolettre($infolettre) {
         $this->infolettre = $infolettre;
+    }
+
+    /**
+     * Specify data which should be serialized to JSON
+     * @link https://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize() {
+        return get_object_vars($this);
     }
 }

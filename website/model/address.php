@@ -2,7 +2,7 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] ."/website/model/city.php";
 
-class address
+class address implements JsonSerializable
 {
     private $pk_addresse;
     private $no_civique;
@@ -123,6 +123,14 @@ class address
         $this->code_postal = $code_postal;
     }
 
-
-
+    /**
+     * Specify data which should be serialized to JSON
+     * @link https://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize() {
+        return get_object_vars($this);
+    }
 }

@@ -7,6 +7,9 @@
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
+SET character_set_client = utf8;
+SET character_set_results = utf8;
+SET character_set_connection = utf8;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -357,37 +360,37 @@ CREATE TABLE `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`pk_utilisateur`, `courriel`, `mot_de_passe`, `administrateur`)
-VALUES (1, 'admin@gmail.com', 'vanillefrancaise', 1),
-       (2, 'simduf15@gmail.com', 'pamplemousseBleu', 1),
-       (3, 'jujug@gmail.com', 'fraiseetmenthe', 1),
-       (4, 'didier124@gmail.com', 'tomateauriz', 0),
-       (5, 'marcbeaudoin@outlook.com', 'bonnepomme', 0),
-       (6, 'carlosamigo@gmail.com', 'cokemystere', 0),
-       (7, 'gengen25@sympatico.com', 'sauceauprunne', 0),
-       (8, 'salutmonron@outlook.com', 'mayoauoignon', 0),
-       (9, 'karine_thibault@outlook.com', 'churasco', 0),
-       (10, 'paul.robert@sympatico.com', 'gruaunature', 0),
-       (11, 'thierry_robitaille@hotmail.com', 'fejouada', 0),
-       (12, 'line.lauzon@outlook.com', 'citrouillemauve', 0),
-       (13, 'Roger_bouchard@hotmail.com', 'poivreetsel', 0),
-       (14, 'pascale.lariviere22@gmail.com', 'thetutisanetoi', 0),
-       (15, 'michel.desautel34@hotmail.com', 'glucoseausucre', 0),
-       (16, 'paul_menard@gmail.com', 'cacaocacabas', 0),
-       (17, 'christian.bournival@hotmail.com', 'lamontagnedunord', 0),
-       (18, 'carole_cote23@outlook.com', 'avoineetmiel', 0),
-       (19, 'kim_bergeron@gmail.com', 'finesherbeetfromage', 0),
-       (20, 'alex_labbe123@hotmail.com', 'titesaucebbq', 0),
-       (21, 'sonicetmario@yahoo.com', 'fritesauce', 0),
-       (22, 'frank_lamothe@yahoo.com', 'saladecesar', 0),
-       (23, 'laurie-landry@yahoo.com', 'oeufalacoq', 0),
-       (24, 'brigitte-masson@gmail.com', 'crepejambon', 0),
-       (25, 'isa-bellehumeur@hotmail.com', 'cafedumatin', 0),
-       (26, 'martin-marin@videotron.ca', 'vanilleouchocolat', 0),
-       (27, 'claude_lapointe@hotmail.com', 'yogourtaupistache', 0),
-       (28, 'mathetfr@videotron.ca', 'carottecuite', 0),
-       (29, 'alainD567@hotmail.com', 'feveaulard', 0),
-       (30, 'systeme.d@videotron.ca', 'questcequonmange', 0),
-       (31, 'code18@hotmail.com', 'jaifaim', 0);
+VALUES (1, 'admin@gmail.com', '$2y$10$y.mvvD.cN5cEGRtfB1VWA.Ck7O9M6NcPgU6fUno4.hFva7guE4xL6', 1), -- vanillefrancaise
+       (2, 'simduf15@gmail.com', '$2y$10$T.RNAdEw6GSgWKAxBUvx8eKZB2NBiHomViFh2l8YnjmPt6n37goka', 1), -- pamplemousseBleu
+       (3, 'jujug@gmail.com', '$2y$10$zParGmd62tJI97goZpEHv.EyLQzcm3yqs8ilmkInZTNIrN//YHyIq', 1), -- fraiseetmenthe
+       (4, 'didier124@gmail.com', '$2y$10$AdjEzYCDzen./H6z68OZA.ISEaLSQs4vHgkfr3ogkRlEwvLZ2psOC', 0), -- tomateauriz
+       (5, 'marcbeaudoin@outlook.com', '$2y$10$aBn4j2rHs1LoTo5SRssAx.yI/B/Zg3YFh.yu0XL91GcI35.uNDKLW', 0), -- bonnepomme
+       (6, 'carlosamigo@gmail.com', '$2y$10$1XftIYaPsmmPVvDutZ5Z/uBZZguNDePNgjTDmAPCx2x.MbZ5Z9qtS', 0), -- cokemystere
+       (7, 'gengen25@sympatico.com', '$2y$10$3m2oFZH61L8ZDLRYa.S2Nus8Cmjh9TGLCESe6J1pMTESpALXa41iK', 0), -- sauceauprunne
+       (8, 'salutmonron@outlook.com', '$2y$10$skkIgn./tyZuS0JgTawQ8OVGpxxefqZ/DatwBs1z4DmXYQTUI/MOa', 0), -- mayoauoignon
+       (9, 'karine_thibault@outlook.com', '$2y$10$VdrsWWKnONidyNUdbFKBQuCnlhfQgzQSBKlHIdUslTkxyPw3kn1lG', 0), -- churasco
+       (10, 'paul.robert@sympatico.com', '$2y$10$zTwZ8B.ZI.iTS6YzvKSJu.md4cP7LvgsQTw1Rm3Qng9TJCbK83rM6', 0), -- gruaunature
+       (11, 'thierry_robitaille@hotmail.com', '$2y$10$AWX8BzIvuLVInaGy5dsiNeY6sPCTtjSR1IgHQm2ymfxjDeIdCETsq', 0), -- fejouada
+       (12, 'line.lauzon@outlook.com', '$2y$10$8Fe0KmqjEtq22o7ieO8FJeUFkBV7Ll31KmveN6szsTYCYdKcnRjsW', 0), -- citrouillemauve
+       (13, 'Roger_bouchard@hotmail.com', '$2y$10$7Xr5BhJmW0ivYuERRjJBCemg.PtdB0akl174Q155q98jB4wF//7/6', 0), -- poivreetsel
+       (14, 'pascale.lariviere22@gmail.com', '$2y$10$5jlfban2vYHvMM3A/7Gk3uX2G9cuZbKutzttDPz7xMhVC0FVyzYXe', 0), -- thetutisanetoi
+       (15, 'michel.desautel34@hotmail.com', '$2y$10$s9CUH2q45U4hxj5n2rjeCenzkRv.KkVBKG3kqsTmYmmQ7tYMOG9hS', 0), -- glucoseausucre
+       (16, 'paul_menard@gmail.com', '$2y$10$AhWCBUoLxlgkr7ys7051eekxROwwmvP3VmhBV0QWULeKC4MjIsUZ.', 0), -- cacaocacabas
+       (17, 'christian.bournival@hotmail.com', '$2y$10$JJNXVH5vrbDvHtEOIiKm7u/5IFSL107p4G1MMEVA07/ee6m/0X67y', 0), -- lamontagnedunord
+       (18, 'carole_cote23@outlook.com', '$2y$10$HQAFoh6ljV1MGrJsxwKO0.bsrvNzfbvsNcK31bnLNaLQqA5gINuOi', 0), -- avoineetmiel
+       (19, 'kim_bergeron@gmail.com', '$2y$10$5buwfH.90MP8PL8VkNxYsurBb0a3XcL2rg/BiypRGLtvgU4KLcysa', 0), -- finesherbeetfromage
+       (20, 'alex_labbe123@hotmail.com', '$2y$10$FNaOnW/NkisIGmN9a10E8e2vwh49wVgC0LRUuDpq6QGaj9UduPXCS', 0), -- titesaucebbq
+       (21, 'sonicetmario@yahoo.com', '$2y$10$h/iUNLJRbmK0WKzSwAOGUul5z60f27scYW9nqJKdTbg5SHMZ.91jy', 0), -- fritesauce
+       (22, 'frank_lamothe@yahoo.com', '$2y$10$CP.h9LGDDoCaSvEeUIhsQOgh0Ba5IVjYGVN/dK69hhJYFm/6bY/oa', 0), -- saladecesar
+       (23, 'laurie-landry@yahoo.com', '$2y$10$BpzWmtU2t9h8prN5rg4rL.CVLYCA4NjwJBxhkvlRSzkem7ryH4Wj6', 0), -- oeufalacoq
+       (24, 'brigitte-masson@gmail.com', '$2y$10$lsj8YeVfyIvEiPqtdiDpr.aDZ.qnEz20DAsCec9580hBh7PHBHrLG', 0), -- crepejambon
+       (25, 'isa-bellehumeur@hotmail.com', '$2y$10$f8TI9lJ3jzdotGFG5zNoP.0xtCpxmGkvm5jxoFgXT9KPn7PkLpJUu', 0), -- cafedumatin
+       (26, 'martin-marin@videotron.ca', '$2y$10$DYxL1wc4nQES.hdxTI8RCejkY85F.g0savMTZ3Rne31mzAHcCL7gm', 0), -- vanilleouchocolat
+       (27, 'claude_lapointe@hotmail.com', '$2y$10$JuQ5KM4/nbFr/iVSFB60uuEj.FQOiAGeB8YbLetWWr1Z1mPobgpAq', 0), -- yogourtaupistache
+       (28, 'mathetfr@videotron.ca', '$2y$10$E1vv7QplIKeZqz29ureXAewrl2i6OQdMvayTTZ.EsKE5UWpkQNpK6', 0), -- carottecuite
+       (29, 'alainD567@hotmail.com', '$2y$10$J88ABNZo0slnBl9cqsmZa.ADKhs3oXJYA0qB8vPgvvMqOM3BpFk7u', 0), -- feveaulard
+       (30, 'systeme.d@videotron.ca', '$2y$10$nRtj0HkX8iKy06Sc7MWGC.w9eTEGiLLqR/IfSjFrCc0u6mMxh.FCy', 0), -- questcequonmange
+       (31, 'code18@hotmail.com', '$2y$10$2hi8WW9F2NGhYHXPc3yPFub1AfhCj5kRPHebA/74Bt8NYS7p0OYg2', 0); -- jaifaim
 
 -- --------------------------------------------------------
 

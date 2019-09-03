@@ -2,7 +2,7 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . "/website/model/service.php";
 
-class facture_service
+class facture_service implements JsonSerializable
 {
     private $pk_facture_service;
     private $fk_facture;
@@ -100,5 +100,16 @@ class facture_service
      */
     public function setTarifFacture($tarif_facture) {
         $this->tarif_facture = $tarif_facture;
+    }
+
+    /**
+     * Specify data which should be serialized to JSON
+     * @link https://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize() {
+        return get_object_vars($this);
     }
 }

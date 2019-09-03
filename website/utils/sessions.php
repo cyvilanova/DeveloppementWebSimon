@@ -2,7 +2,7 @@
 
 
 function create_session($user) {
-    if (!empty($_SESSION)) {
+    if (isset($_SESSION)) {
         session_abort();
     }
 
@@ -10,8 +10,15 @@ function create_session($user) {
 }
 
 function stop_session() {
-    if (!empty($_SESSION)) {
+    if (isset($_SESSION)) {
         session_unset();
         session_abort();
+    }
+}
+
+function redirect_unauthenticated_user($path) {
+    if (!isset($_SESSION)) {
+        header("Location: " . $path);
+        exit();
     }
 }

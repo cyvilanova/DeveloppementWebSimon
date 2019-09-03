@@ -1,7 +1,6 @@
 <?php
 
 function getConnection() {
-
     $serverName = "127.0.0.1:3307";
     $dbName = "lab_app_media";
     $user = "root";

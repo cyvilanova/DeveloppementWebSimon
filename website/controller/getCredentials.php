@@ -12,9 +12,9 @@ if (!empty(sanitize_user_input($_GET["email"])) && !empty(sanitize_user_input($_
     $row = $result->fetch();
     $user = user::load($row["pk_utilisateur"]);
 
-    if (password_verify(sanitize_user_input($_GET), $user->getMotDePasse())) {
+    if (password_verify(sanitize_user_input($_GET["password"]), $user->getMotDePasse())) {
         create_session($user);
-        echo "{ \"status\" : \"logged_\" }";
+        echo "{ \"status\" : \"logged\" }";
 
     } else {
         echo "{ \"status\" : \"invalid credentials\" }";
