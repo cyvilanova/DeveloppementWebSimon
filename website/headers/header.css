@@ -1,8 +1,13 @@
+.wrap {
+  background-image: linear-gradient(to bottom, var(--blue), var(--light));
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
 .header {
   display: flex;
-  padding: 40px;
-  height: 80px;
-  background-image: linear-gradient(to bottom, var(--blue), var(--light));
+  width: 1200px;
   justify-content: space-between;
 }
 
