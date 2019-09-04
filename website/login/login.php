@@ -16,7 +16,7 @@
 <body>
 
 <?php
-    require_once $_SERVER['DOCUMENT_ROOT'] . "/DeveloppementWebSimon/website/utils/header_selection.php";
+    require_once $_SERVER['DOCUMENT_ROOT'] . "/website/utils/header_selection.php";
     get_header();
 ?>
 

@@ -1,28 +1,28 @@
 <?php
 
-
-function create_session($user) {
-    if (isset($_SESSION)) {
-        session_abort();
-    }
-
+function create_session($user=null) {
+    require_once $_SERVER['DOCUMENT_ROOT'] ."/website/model/user.php";
     session_start();
-    $_SESSION["user"] = $user;
+
+    if (!empty($user))
+        $_SESSION["user"] = $user;
+
 }
 
 function stop_session() {
-    if (isset($_SESSION)) {
+    if (!empty($_SESSION) AND !empty(session_id())) {
         session_unset();
-        session_abort();
+        session_destroy();
+        $_SESSION = array();
     }
 }
 
 function session_exists() {
-    return isset($_SESSION) && !empty($_SESSION["user"]);
+    return !empty(session_id()) && !empty($_SESSION["user"]);
 }
 
 function redirect_unauthenticated_user($path) {
-    if (!isset($_SESSION)) {
+    if (!empty(session_id())) {
         header("Location: " . $path);
         exit();
     }

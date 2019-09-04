@@ -20,7 +20,7 @@
         <nav class="navigation">
             <div class="top-links">
                 <a href="">Mon panier (1)</a>
-                <a href="../catalogue/catalogue.php">Se déconnecter</a>
+                <a href="../controller/closeSession.php">Se déconnecter</a>
             </div>
 
             <div class="bottom-links">

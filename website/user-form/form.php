@@ -14,7 +14,12 @@
 </head>
 
 <body>
+
 <div class="page">
+    <?php
+    require_once $_SERVER['DOCUMENT_ROOT'] . "/website/utils/header_selection.php";
+    get_header();
+    ?>
 
     <form class="form">
         <div class="text">
@@ -25,20 +30,20 @@
         </div>
         <div class="section">
             <div class="column">
-                <input placeholder="Nom" required>
+                <input id="nom" placeholder="Nom" required>
                 <div class="address">
-                    <input placeholder="No Civic" min="0" type="number" class="number" required>
-                    <input placeholder="Rue" class="street" required>
+                    <input id="no_civic" placeholder="No Civic" min="0" type="number" class="number" required>
+                    <input id="rue" placeholder="Rue" class="street" required>
                 </div>
-                <input placeholder="Code postal" required>
+                <input id="code_postal" placeholder="Code postal" required>
             </div>
             <div class="column">
-                <input placeholder="Prénom" required>
+                <input id="prenom" placeholder="Prénom" required>
                 <select required>
                     <option disabled selected>Ville</option>
                     <option>a</option>
                 </select>
-                <input placeholder="Numéro de téléphone" min="0" type="number" required>
+                <input id="tel" placeholder="Numéro de téléphone" min="0" type="text" required>
             </div>
         </div>
         <div class="text">
@@ -50,7 +55,7 @@
 
         <div class="section">
             <div class="column">
-                <input placeholder="Courriel" type="email" required>
+                <input id="couriel" placeholder="Courriel" type="email" required>
                 <input placeholder="Mot de passe" type="password" required>
             </div>
             <div class="column">

@@ -18,7 +18,7 @@
         <img src="../../images/icones/logo.png" alt="logo" class="logo">
         <nav class="navigation">
             <div class="top-links">
-                <a href="">Se déconnecter</a>
+                <a href="../controller/closeSession.php">Se déconnecter</a>
             </div>
 
             <div class="bottom-links">
