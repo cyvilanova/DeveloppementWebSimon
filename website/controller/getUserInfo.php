@@ -1,7 +1,7 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] ."/website/utils/security.php";
-require_once $_SERVER['DOCUMENT_ROOT'] ."/website/model/user.php";
+require_once $_SERVER['DOCUMENT_ROOT'] ."/DeveloppementWebSimon/website/utils/security.php";
+require_once $_SERVER['DOCUMENT_ROOT'] ."/DeveloppementWebSimon/website/model/user.php";
 
 
 header("Content-Type: application/json");

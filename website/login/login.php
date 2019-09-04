@@ -16,7 +16,7 @@
 <body>
 
 <?php
-    require_once $_SERVER['DOCUMENT_ROOT'] . "/website/utils/header_selection.php";
+    require_once $_SERVER['DOCUMENT_ROOT'] . "/DeveloppementWebSimon/website/utils/header_selection.php";
     get_header();
 ?>
 
@@ -36,7 +36,7 @@
         <a href="">Mot de passe oublié</a>
 
         <div class="buttons">
-            <a>Connexion</a>
+            <a id="connexion">Connexion</a>
             <a href="../user-form/form.php">S'inscrire</a>
         </div>
 

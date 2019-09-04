@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    $(".form").click((e) => {
+    $(".form #connexion").click((e) => {
         e.preventDefault();
         let email = $('#email').val();
         let password = $('#password').val();
@@ -13,7 +13,6 @@ $(document).ready(() => {
                     password: password
                 },
                 success: res => {
-                    console.log(res);
                     if (res.status === "logged") {
                         window.location.href = "../catalogue/catalogue.php";
                     }

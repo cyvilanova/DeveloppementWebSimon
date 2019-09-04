@@ -19,6 +19,9 @@
 <?php
     include_once "../utils/header_selection.php";
     get_header();
+    if (!empty($_SESSION['user'])) {
+        $_SESSION['user']->getAdministrateur();
+    }
 ?>
 
 <div class="page">
@@ -26,5 +29,4 @@
 </div>
 
 </body>
-
 </html>
