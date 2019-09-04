@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Info++</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="style.css">
     <script src="user.js"></script>
@@ -16,18 +16,17 @@
 <body>
 
 <?php
-    require_once $_SERVER['DOCUMENT_ROOT'] . "/website/utils/header_selection.php";
+    require_once $_SERVER['DOCUMENT_ROOT'] . "/DeveloppementWebSimon/website/utils/header_selection.php";
     get_header();
 ?>
 
 <div class="page">
 
-
     <div class="text">
         Veuillez vous identifier pour avoir la possibilité d'acheter des formations.
     </div>
 
-    <form class="form" target="http://localhost:8080/website/controller/getCredentials.php" method="post">
+    <form class="form">
 
         <div class="inputs">
             <input type="email" placeholder="Courriel" required id="email">
