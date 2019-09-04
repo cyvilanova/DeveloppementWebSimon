@@ -1,10 +1,10 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] . "/website/utils/security.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/website/model/service.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/DeveloppementWebSimon/website/utils/security.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/DeveloppementWebSimon/website/model/service.php";
 
 
-$result = executeSelect("SELECT pk_service FROM `lab_app_media`.service", array());
+$result = executeSelect("SELECT pk_service FROM `lab_app_media`.service ORDER BY service_titre", array());
 $services = array();
 
 while ($row = $result->fetch()) {

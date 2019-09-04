@@ -1,6 +1,6 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] . "/website/model/service.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/DeveloppementWebSimon/website/model/service.php";
 
 
 class promotion_service implements JsonSerializable

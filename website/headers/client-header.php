@@ -20,11 +20,11 @@
         <nav class="navigation">
             <div class="top-links">
                 <a href="">Mon panier (1)</a>
-                <a href="">Se déconnecter</a>
+                <a href="../catalogue/catalogue.php">Se déconnecter</a>
             </div>
 
             <div class="bottom-links">
-                <a href="" class="red">Catalogue</a>
+                <a href="../catalogue/catalogue.php" class="red">Catalogue</a>
                 <a href="" class="orange">Profil</a>
                 <label>
                     <input class="search">
