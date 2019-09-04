@@ -8,10 +8,14 @@
 }
 
 .card {
-    display: flex;
+    flex-direction: column;
     border: 2px solid var(--orange);
     padding: 10px 20px;
     margin-top: 20px;
+}
+
+.visible {
+    display: flex;
 }
 
 .img {
@@ -53,4 +57,34 @@
 .footer img {
     height: 50px;
     width: auto;
+}
+
+.promotions {
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+
+.promotions-title {
+    font-size: 22px;
+    color: var(--red);
+    width: 200px;
+    margin-right: 20px;
+}
+
+.promotions img {
+    width: 80px;
+    right: 0;
+}
+
+.code {
+    display: flex;
+    width: 75%;
+}
+
+.add {
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 56px;
+    padding: 10px 20px;
 }

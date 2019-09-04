@@ -14,13 +14,13 @@
 </head>
 
 <body>
-
-<div class="page">
     <?php
     require_once $_SERVER['DOCUMENT_ROOT'] . "/website/utils/header_selection.php";
     get_header();
     ?>
 
+
+<div class="page">
     <form class="form">
         <div class="text">
             Remplissez ce formulaire pour créer votre profil.
