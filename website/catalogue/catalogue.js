@@ -1,21 +1,26 @@
-$.ajax({
-    type: "POST",
-    dataType: "text",
-    contentType: "application/json",
-    url: "/DeveloppementWebSimon/website/controller/getAllServices.php",
-    success: data => {
-        let JSONObject = $.parseJSON(data);
+let adminConnected = false;
+getUser();
 
-        for (let key in JSONObject) {
-            if (JSONObject.hasOwnProperty(key)) {
-                createCard(JSONObject[key]);
+function getServices() {
+    $.ajax({
+        type: "POST",
+        dataType: "text",
+        contentType: "application/json",
+        url: "/DeveloppementWebSimon/website/controller/getAllServices.php",
+        success: data => {
+            let JSONObject = $.parseJSON(data);
+
+            for (let key in JSONObject) {
+                if (JSONObject.hasOwnProperty(key)) {
+                    createCard(JSONObject[key]);
+                }
             }
+        },
+        error: error => {
+            console.log(error);
         }
-    },
-    error: error => {
-        console.log(error);
-    }
-});
+    });
+}
 
 function createCard(service) {
     let card = '<div class="card" id="' + service['pk_service'] + '">' +
@@ -34,7 +39,26 @@ function createCard(service) {
         '</div>';
     $('.page').append(card);
 
-    addPromotions(service);
+    if (adminConnected) {
+        addPromotions(service);
+    }
+}
+
+function getUser(service) {
+    $.ajax({
+        method: "GET",
+        url: "../controller/getClientInfo.php",
+        contentType: "json",
+        success: res => {
+            if (res.administrateur == 1) {
+                adminConnected = true;
+            }
+            getServices();
+        },
+        error: err => {
+            console.log(err);
+        }
+    });
 }
 
 function addPromotions(service) {

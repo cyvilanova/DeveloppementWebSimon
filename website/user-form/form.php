@@ -14,11 +14,10 @@
 </head>
 
 <body>
-    <?php
-    require_once $_SERVER['DOCUMENT_ROOT'] . "/website/utils/header_selection.php";
-    get_header();
-    ?>
-
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . "/DeveloppementWebSimon/website/utils/header_selection.php";
+get_header();
+?>
 
 <div class="page">
     <form class="form">
@@ -39,9 +38,8 @@
             </div>
             <div class="column">
                 <input id="prenom" placeholder="Prénom" required>
-                <select required>
+                <select required id="cities">
                     <option disabled selected>Ville</option>
-                    <option>a</option>
                 </select>
                 <input id="tel" placeholder="Numéro de téléphone" min="0" type="text" required>
             </div>
@@ -66,7 +64,7 @@
         <div class="newsletter">
             <div>
                 <span class="chk" unchecked></span>
-                <input type="checkbox" id="newsletter" />
+                <input type="checkbox" id="newsletter"/>
             </div>
             <label for="newsletter">Souhaitez-vous recevoir les promotions et les nouveautés?</label>
         </div>

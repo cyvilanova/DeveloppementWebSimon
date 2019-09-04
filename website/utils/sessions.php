@@ -1,7 +1,7 @@
 <?php
 
 function create_session($user=null) {
-    require_once $_SERVER['DOCUMENT_ROOT'] ."/website/model/user.php";
+    require_once $_SERVER['DOCUMENT_ROOT'] ."/DeveloppementWebSimon/website/model/user.php";
     session_start();
 
     if (!empty($user))
