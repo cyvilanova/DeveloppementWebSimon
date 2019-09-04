@@ -1,8 +1,8 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] ."/website/utils/statement_executor.php";
-require_once $_SERVER['DOCUMENT_ROOT'] ."/website/model/address.php";
-require_once $_SERVER['DOCUMENT_ROOT'] ."/website/model/user.php";
+require_once $_SERVER['DOCUMENT_ROOT'] ."/DeveloppementWebSimon/website/utils/statement_executor.php";
+require_once $_SERVER['DOCUMENT_ROOT'] ."/DeveloppementWebSimon/website/model/address.php";
+require_once $_SERVER['DOCUMENT_ROOT'] ."/DeveloppementWebSimon/website/model/user.php";
 
 class client implements JsonSerializable
 {

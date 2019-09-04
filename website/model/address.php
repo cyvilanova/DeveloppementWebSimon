@@ -1,6 +1,6 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] ."/website/model/city.php";
+require_once $_SERVER['DOCUMENT_ROOT'] ."/DeveloppementWebSimon/website/model/city.php";
 
 class address implements JsonSerializable
 {

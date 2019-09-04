@@ -1,7 +1,7 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] . "/website/model/client.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/website/model/facture_service.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/DeveloppementWebSimon/website/model/client.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/DeveloppementWebSimon/website/model/facture_service.php";
 
 class bill implements JsonSerializable
 {

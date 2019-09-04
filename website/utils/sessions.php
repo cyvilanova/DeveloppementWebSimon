@@ -6,7 +6,8 @@ function create_session($user) {
         session_abort();
     }
 
-    session_start(array("user" => $user));
+    session_start();
+    $_SESSION["user"] = $user;
 }
 
 function stop_session() {
