@@ -1,0 +1,117 @@
+.page {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.form {
+    width: 700px;
+    padding: 50px;
+    border: 2px solid var(--orange);
+}
+
+.text {
+    font-size: 14px;
+    color: var(--dark);
+}
+
+.subtext {
+    font-size: 10px;
+    color: var(--red);
+}
+
+select {
+    color: var(--orange);
+}
+
+.section {
+    display: flex;
+    margin: 20px 0;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.column input,
+.column select {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 12px;
+}
+
+.column:first-of-type {
+    margin-right: 20px;
+}
+
+.address {
+    display: flex;
+}
+
+.number {
+    width: 30%;
+}
+
+.street {
+    margin-left: 10px;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    width: 170px;
+    border-radius: 15px;
+    color: var(--light);
+    background: linear-gradient(180deg, var(--light), var(--orange));
+    font-family: "Century Gothic", sans-serif;
+    font-size: 26px;
+    border: 1px solid var(--orange);
+}
+
+.newsletter {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+::placeholder { /* Firefox, Chrome, Opera */
+    color: var(--orange);
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--orange);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--orange);
+}
+
+.newsletter {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.chk {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 1px;
+    padding: 2px;
+    border: 1px solid rgb(141, 141, 141);
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    display:none;
+}
