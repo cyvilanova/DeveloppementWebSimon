@@ -22,6 +22,7 @@
 
 <div class="page">
 
+
     <div class="text">
         Veuillez vous identifier pour avoir la possibilité d'acheter des formations.
     </div>
