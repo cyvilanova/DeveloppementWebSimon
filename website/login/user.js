@@ -14,10 +14,10 @@ $(document).ready(() => {
                    email: email,
                    password: password
                },
+               dataType: "json",
                success: res => {
-                   console.log(res);
                    if (res.status === "logged") {
-                       window.location.href = "localhost:8080/website/login/test.php"
+                       window.location.href = "http://127.0.0.1:8080/website/catalogue/catalogue.php"
                    }
                },
                error: (error, status, err) => {
