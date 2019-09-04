@@ -1,6 +1,6 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] ."/website/utils/configs.php";
+require_once $_SERVER['DOCUMENT_ROOT'] ."/DeveloppementWebSimon/website/utils/configs.php";
 
 function executeInsert($statement, $argsArray) {
     $conn = getConnection();

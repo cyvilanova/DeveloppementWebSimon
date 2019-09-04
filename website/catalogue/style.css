@@ -4,12 +4,20 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    padding: 30px 0;
 }
 
 .card {
     display: flex;
     border: 2px solid var(--orange);
     padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.img {
+    min-width: 200px;
+    height: auto;
+    margin-right: 20px;
 }
 
 .informations {
@@ -19,13 +27,14 @@
 }
 
 .footer {
-     display: flex;
-align-items: center;
-justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .title, .footer {
     font-size: 26px;
+    padding: 15px 0;
 }
 
 .description {
